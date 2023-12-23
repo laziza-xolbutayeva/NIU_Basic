@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+*{font-family: 'Poppins', sans-serif;}
+/* Index statistika start */
+.index-statistika {
+    background-image: url(../../../assets/statirtika.svg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: block;
+    padding: 60px 0;
+}
+
+.index-statistika::before {
+    margin-top: -60px;
+    position: absolute;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 136, 42, 1);
+    opacity: 0.8;
+}
+
+.index-statistika .container {
+    position: relative;
+}
+
+.index-statistika .title {
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 54px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.index-statistika .item {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.45);
+    border-radius: 18px;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    /* gap: 20px; */
+    height: 210px;
+}
+
+.index-statistika .item p{
+    font-family: Poppins;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 45px;
+    letter-spacing: 0em;
+    text-align: center;
+    
+text-align: center;
+color: #fff;
+
+}
+.index-statistika .item h6 {
+    font-family: Gosha Sans;
+font-size: 60px;
+font-weight: 400;
+line-height: 75px;
+letter-spacing: 0em;
+text-align: center;
+
+color: #fff;
+margin: 0;
+padding: 0;
+
+}
+
+/* @media (max-width:992px) {
+
+    .index-statistika .title {
+        font-size: 30px;
+    }
+}
+
+@media (max-width:768px) {
+    .index-statistika .title  {
+        font-size: 25px;
+    }
+
+}
+
+@media (max-width:576px) {
+    .index-statistika .title  {
+        font-size: 20px;
+    }
+} */
+
+/* Index statistika end */

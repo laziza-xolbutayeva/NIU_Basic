@@ -1,0 +1,42 @@
+.index-direction{
+    background: #198A29;
+}
+.direction{padding-top: 44px;}
+.direction-title h2{
+    font-family: Poppins;
+font-size: 40px;
+font-weight: 700;
+line-height: 48px;
+letter-spacing: 0em;
+text-align: center;
+color: #fff;
+margin-bottom: 45px;
+
+}
+.diraction2{
+    position: absolute;
+    width: 300px;
+height: 180px;
+border-radius: 20px;
+background-image: url(../../../assets/newsImg.svg);
+background-repeat: no-repeat;
+opacity: 0.2;
+}
+.direction-card{
+    width: 300px;
+height: 180px;
+border-radius: 20px;
+border: 2px solid #fff;
+padding: 25px;
+margin-bottom: 30px;
+
+}
+.direction-card p{
+    font-family: Poppins;
+font-size: 20px;
+font-weight: 700;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: left;
+color: #fff;
+}

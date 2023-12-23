@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+*{font-family: 'Poppins', sans-serif;}
+.index-announsement{
+    padding-top: 80px;
+    background: #fff;
+}
+.announsement-title-h{
+    font-family: Poppins;
+font-size: 40px;
+font-weight: 700;
+line-height: 48px;
+letter-spacing: 0em;
+text-align: left;
+color: #212529;
+
+
+}
+.row a{
+    text-decoration: none;
+}
+.card{
+    border: none!important;
+    border-radius: 15px;
+    background: #F8F8F8!important;
+    margin-bottom: 45px;
+}
+.card-title{
+    font-family: Poppins;
+font-size: 20px;
+font-weight: 700;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+.card-body p{
+    font-family: Poppins;
+font-size: 14px;
+font-weight: 500;
+line-height: 26px;
+letter-spacing: 0em;
+text-align: left;
+color: #53545B;
+}
+.announsement-btn{
+    background: #198A29;
+    width: 380px;
+height: 50px;;
+border-radius: 30px;
+border: none;
+color: #fff;
+}

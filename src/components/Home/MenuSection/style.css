@@ -1,0 +1,121 @@
+/* Index interactive start */
+
+.index-interactive {
+    background-color: #fff;
+    width: 100%;
+}
+.inteactive-box-img{
+    width: 95px;
+    height: 95px;
+    background-color: rgba(25, 138, 41, 1);
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+a .item{
+    width: 360px;
+height: 290px;
+border-radius: 15px;
+background:  #F8F8F8;
+}
+.item p{
+font-size: 20px;
+font-weight: 600;
+letter-spacing: 0em;
+text-align: left;
+color: #000;
+
+}
+@media (max-width:768px) {
+    .index-interactive .rows {
+        padding: 0;
+    }
+}
+
+.index-interactive .rows>div {
+    padding: 10px;
+}
+
+@media (max-width:992px) {
+    .index-interactive .rows {
+        justify-content: flex-start;
+    }
+}
+
+.index-interactive .rows .item {
+    border-radius: 15px;
+    padding: 15px 30px;
+    height: 200px;
+    width: 276px;
+    /* height: 100%; */
+    background-color: #EEF4FF;
+    color: #007BFF;
+}
+.rows a{
+    text-decoration: none;}
+.index-interactive .rows .item img {
+   width: 70px;
+   height: 70px;
+}
+
+
+.table-department {
+    display: flex;
+    width: 100%;
+}
+.table-department tbody{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.table-department tr{
+   text-align: justify;
+}
+
+
+
+
+/* .overflow-y-hidden{
+    overflow-y: hidden;
+} */
+
+/* 
+.index-interactive .rows .bg-1 {
+    background-color: #EEF4FF;
+    color: #007BFF;
+}
+
+.index-interactive .rows .bg-2 {
+    color: #13CD3B;
+    background-color: #ECFBF0;
+}
+
+.index-interactive .rows .bg-3 {
+    color: #FAAD19;
+    background-color: #FFF9ED;
+}
+
+.index-interactive .rows .bg-4 {
+    color: #FF2572;
+    background-color: #FFEEF4;
+} */
+
+@media (max-width: 1199px) {
+    .index-interactive .rows .item {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 991px) {
+    .index-interactive .rows .item {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    .index-interactive .rows .item {
+        font-size: 13px;
+    }
+}
+
+/* Index interactive End */
