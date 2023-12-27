@@ -1,8 +1,9 @@
 import "./style.css";
-import logo from "../../../assets/logo.svg"
+import logo from "../../../assets/Link → niu_logotype_white_2.png.svg"
 import flag from "../../../assets/uzb-flag.svg";
 import russian from "../../../assets/russia-flag-circular-17765.svg";
 import english from "../../../assets/united_kingdom.svg";
+import {NavLink} from "react-router-dom";
 
 
 function index() {
@@ -17,12 +18,10 @@ function index() {
                   <div className="logo">
                     <img
                       src={logo}
-                      alt="logo"
+                      alt="logo" className="me-2"
                     ></img>
                     <p>
-                    Navoiy 
-innovatsiyalar 
-universiteti
+                    Navoiy innovatsiyalar universiteti
                     </p>
                   </div>
                 </a>
@@ -31,7 +30,7 @@ universiteti
                 </a>
               </div>
               <ul
-                className="col-12 d-lg-flex d-block col-xl-8 justify-content-end align-items-right nav-list"
+                className="col-12 col-xl-6 d-lg-flex d-block justify-content-end align-items-right nav-list"
                 id="nav-list"
               >
                 <li className="list-inline-item nav-submenu menu-type-1">
@@ -1380,6 +1379,9 @@ universiteti
                   </ul>
                 </li>
               </ul>
+              <NavLink to="/Registration" className="col-12 col-xl-2">
+                <button className="submission">Hujjat topshirish</button>
+              </NavLink>
             </div>
           </div>
         </nav>

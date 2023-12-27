@@ -178,6 +178,14 @@ text-align: left;
     font-size: 30px;
     display: none;
 }
+.submission{
+    width: 202px;
+    height: 50px;;
+    padding: 0px, 34px, 0px, 34px;
+    border-radius: 30px;
+    border: none;
+    color: #198A29;
+}
 
 @media (max-width:1090px) {
     .header-sticky .nav-list .list-inline-item {
