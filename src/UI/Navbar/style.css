@@ -14,7 +14,7 @@
     display: flex;
     align-items: center;
 }
-.list-inline-item:not(:last-child) {
+.toplist-inline-item:not(:last-child) {
     margin-right: 0.5rem;
 }
 
@@ -28,10 +28,15 @@
     text-decoration: none;
 }
 .top section li img {
-    font-size: 17px;
-    color: var(--font-black2);
+    
+    width: 28px;
+    height: 28px;
 }
 .search-open {
     background-color: transparent;
     border: none;
+}
+#gerb a img{
+width: 35px;
+height: 35px;
 }

@@ -1,5 +1,5 @@
 import "./style.css";
-import Navbar from "../../UI/Reistration-Navbar/index";
+import Navbar from "../../UI/Registration-Navbar/index";
 import { NavLink } from "react-router-dom";
 
 function index() {
@@ -21,9 +21,11 @@ function index() {
                   <label htmlFor="registration">Tug’ilgan kun</label>
                   <input type="date"  />
                 </div>
-              <a to="/Registration/SMS" className="d-flex justify-content-end text-decoration-none">
+                <div className="d-flex justify-content-end ">
+              <NavLink to="/Registration/PassportInfo" className="text-decoration-none">
                 <button className="registration_continue" type="button" >Davom etish</button>
-              </a>
+              </NavLink>
+              </div>
               </form>
             </div>
             <p className="registration_contact">Savollar bo’lsa bog’lanishingiz mumkin +998 55 500 00 43</p>

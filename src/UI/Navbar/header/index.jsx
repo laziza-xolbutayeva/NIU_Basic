@@ -30,7 +30,7 @@ function index() {
                 </a>
               </div>
               <ul
-                className="col-12 col-xl-6 d-lg-flex d-block justify-content-end align-items-right nav-list"
+                className="col-12 col-xl-6 d-lg-flex d-block justify-content-between  nav-list pe-4"
                 id="nav-list"
               >
                 <li className="list-inline-item nav-submenu menu-type-1">

@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./style.css";
-import img from "../../../assets/direction-img.svg";
+import img from "../../../assets/school icon.svg";
 function index() {
   return (
     <>
@@ -12,7 +12,39 @@ function index() {
             </div>
             <div className="direction-body">
               <div className="row">
-                <div className="col-3">
+                <div className="col-4">
+                  <div className="direction-card">
+                    <div className="direction-card_icon">
+                      <img src={img} alt="" />
+                    </div>
+                    <p>Maktabgacha talim</p>
+                  </div>
+                </div>
+                <div className="col-4">
+                  <div className="direction-card">
+                    <div className="direction-card_icon">
+                      <img src={img} alt="" />
+                    </div>
+                    <p>Maktabgacha talim</p>
+                  </div>
+                </div>
+                <div className="col-4">
+                  <div className="direction-card">
+                    <div className="direction-card_icon">
+                      <img src={img} alt="" />
+                    </div>
+                    <p>Maktabgacha talim</p>
+                  </div>
+                </div>
+                <div className="col-4">
+                  <div className="direction-card">
+                    <div className="direction-card_icon">
+                      <img src={img} alt="" />
+                    </div>
+                    <p>Maktabgacha talim</p>
+                  </div>
+                </div>
+                {/* <div className="col-3">
                   <div className="diraction2"></div>
                     <div className="direction-card">
                       <p>
@@ -56,17 +88,7 @@ function index() {
                         avtomatlashtirish va boshqarish (tarmoqlar bo'yicha)
                       </p>
                     </div>
-                </div>
-                <div className="col-3">
-                  <div className="diraction2"></div>
-                    <div className="direction-card">
-                      <p>
-                        Texnologik jarayonlar va ishlab chiqarishni
-                        avtomatlashtirish va boshqarish (tarmoqlar bo'yicha)
-                      </p>
-                    </div>
-                </div>
-
+                </div> */}
               </div>
             </div>
           </div>

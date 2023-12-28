@@ -1,5 +1,5 @@
 import "./style.css";
-import Navbar from "../../UI/Reistration-Navbar/index";
+import Navbar from "../../UI/Registration-Navbar/index";
 import {NavLink} from "react-router-dom";
 
 function index() {

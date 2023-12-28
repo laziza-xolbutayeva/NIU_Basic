@@ -1,5 +1,8 @@
 .index-direction{
-    background: #198A29;
+    background: rgb(32,195,55);
+    background: radial-gradient(circle, rgba(32,195,55,1) 0%, rgba(25,138,41,1) 100%);
+
+
 }
 .direction{padding-top: 44px;}
 .direction-title h2{
@@ -13,23 +16,31 @@ color: #fff;
 margin-bottom: 45px;
 
 }
-.diraction2{
-    position: absolute;
-    width: 300px;
-height: 180px;
-border-radius: 20px;
-background-image: url(../../../assets/newsImg.svg);
-background-repeat: no-repeat;
-opacity: 0.2;
-}
 .direction-card{
-    width: 300px;
-height: 180px;
+height: 280px;
 border-radius: 20px;
-border: 2px solid #fff;
+border: none;
 padding: 25px;
 margin-bottom: 30px;
+position: relative;
+background: rgba(25, 138, 41, 1);
 
+
+}
+.direction-card:hover{
+    border: 1px solid rgba(255, 255, 0, 1);
+   
+}
+
+.direction-card_icon{
+    width: 90px;
+    height: 90px;
+    padding: 12px;
+    background: #157B23;
+    border-radius:15px;
+}
+.direction-card_icon:hover{
+    border:1px solid rgba(255, 255, 0, 1);
 }
 .direction-card p{
     font-family: Poppins;
@@ -39,4 +50,7 @@ line-height: 24px;
 letter-spacing: 0em;
 text-align: left;
 color: #fff;
+position: absolute;
+bottom: 30px;
+left: 30px;
 }

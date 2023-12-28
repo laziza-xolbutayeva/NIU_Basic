@@ -65,7 +65,7 @@ li a i {
     position: relative;
 }
 
-ul {
+.reg-navbar_lang ul {
     position: absolute;
     left: 0;
     top: 100%;
