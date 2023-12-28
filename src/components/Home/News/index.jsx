@@ -2,6 +2,7 @@ import "./style.css";
 import img from "../../../assets/newsImg.svg";
 import time from "../../../assets/time.svg";
 import eye from "../../../assets/eyes.svg";
+import { NavLink } from "react-router-dom";
 
 function index() {
   return (
@@ -128,9 +129,9 @@ function index() {
             </div>
           </div>
           <div className="d-flex py-4 justify-content-center">
-              <a href="/news">
+              <NavLink to="/News">
                 <button className=" news-btn">Barcha yangiliklar</button>
-              </a>
+              </NavLink>
           </div>
         </div>
       </section>

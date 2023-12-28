@@ -1,0 +1,13 @@
+.NewsDetail_Card{
+
+    border-radius: 15px;
+    border: 1px solid #EBEBEB;
+    background: #fff;
+}
+.NewsDetail_Card_img{
+    width: 500px;
+    height: 500px;
+}
+.NewsDetail_Card_box{
+    padding: 20px 30px;
+}

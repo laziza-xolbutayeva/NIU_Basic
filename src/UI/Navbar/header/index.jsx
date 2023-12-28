@@ -42,29 +42,29 @@ function index() {
                       </a>
                       <ul>
                         <li className="menu-type-2">
-                          <a href="/uz/news" data-turbo="true">
+                          <NavLink to="/News" data-turbo="true">
                             Yangiliklar
-                          </a>
+                          </NavLink>
                         </li>
                         <li className="menu-type-2">
-                          <a href="/uz/announcements" data-turbo="true">
+                          <NavLink to="/Announcements" data-turbo="true">
                             E'lonlar
-                          </a>
+                          </NavLink>
                         </li>
                         <li className="menu-type-2">
-                          <a href="/uz/grants" data-turbo="true">
+                          <NavLink to="/Grand" data-turbo="true">
                             Xalqaro grant-stipendiyalar
-                          </a>
+                          </NavLink>
                         </li>
                         <li className="menu-type-2">
-                          <a href="/uz/photogallery" data-turbo="true">
+                          <NavLink to="/Gallery" data-turbo="true">
                             Fotogalereya
-                          </a>
+                          </NavLink>
                         </li>
                         <li className="menu-type-2">
-                          <a href="/uz/videogallery" data-turbo="true">
+                          <NavLink to="/VideoGallery" data-turbo="true">
                             Videogalereya
-                          </a>
+                          </NavLink>
                         </li>
                       </ul>
                     </li>

@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+}
+.index-News {
+  min-height: 100vh;
+  padding-top: 28px;
+  background: #f8f8f8;
+  padding-bottom: 150px;
+}
+.News-title {
+  height: 58px;
+  border-radius: 15px;
+  background: rgba(21, 123, 35, 0.08);
+  padding: 17px 20px;
+}
+.News-title li a {
+  text-decoration: none;
+  color: #000;
+  font-family: Poppins;
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: left;
+
+  padding: 0 25px 0 0;
+}
+.News-title li:first-child {
+  list-style-type: none;
+}
+.News-title-h {
+  border-left: 4px solid #198a29;
+  color: #000;
+  font-family: Poppins;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding-left: 10px;
+}
+.row a {
+  text-decoration: none;
+}
+.card {
+  border: none !important;
+  border-radius: 15px;
+  background-color: #fff !important;
+}
+.card-title {
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.card-body p {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #53545b;
+}
+.pagination ul{
+    text-align: center;
+}
+.pagination ul,
+li {
+  list-style: none;
+  display: inline;
+  padding-left: 0px;
+}
+
+.pagination li {
+  counter-increment: pagination;
+  margin: 0 15px;
+}
+.pagination li:hover a {
+  color: #050929;
+  background-color: #fff;
+  border: solid 1px #198a29;
+}
+.pagination li.active a {
+  color: #fff;
+  background-color: #198a29;
+  border: solid 1px #198a29;
+}
+.pagination li:first-child {
+  float: left;
+}
+.pagination li:first-child a:after {
+  content: "<";
+  color:#198a29;
+}
+.pagination li:nth-child(2) {
+  counter-reset: pagination;
+}
+.pagination li:last-child {
+  float: right;
+}
+.pagination li:nth-last-child(1) a:after {
+  content: ">";
+  color:#198a29;
+}
+.pagination li a {
+  border: solid 1px #d9d9d9;
+  border-radius: 0.2rem;
+  color: #050929;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  padding: 0.5rem 0.9rem;
+}
+.pagination li a:after {
+  content: " " counter(pagination) " ";
+}
+.News-title-now{
+    color:#737373;
+}

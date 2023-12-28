@@ -1,0 +1,36 @@
+.index-Grand {
+    min-height: 100vh;
+    padding-top: 28px;
+    background: #fff;
+    padding-bottom: 150px;
+  }
+  .Grand-title {
+    height: 58px;
+    border-radius: 15px;
+    background: rgba(21, 123, 35, 0.08);
+    padding: 17px 20px;
+  }
+  .Grand-title li a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1);
+    padding: 0 25px 0 0;
+  }
+  .Grand-title li:first-child {
+    list-style-type: none;
+  }
+  .Grand-title-h {
+    border-left: 4px solid #198a29;
+    color: #000;
+    font-family: Poppins;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-left: 10px;
+  }
+  .card {
+    border: none !important;
+    border-radius: 15px;
+    background-color: #f8f8f8 !important;
+  }

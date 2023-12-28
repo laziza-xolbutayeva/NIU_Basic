@@ -105,14 +105,14 @@ tayyorlash maskani.</p>
                 <div className="footer-card">
                     <h2 className="footer-title">Xarita</h2>
                     <div style={{position:"relative",overflow:"hidden", marginTop:"40px",}}>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8689.20138598831!2d66.9576484925305!3d39.64754021413086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4d18d2c22d77cb%3A0x5cfaf9320fc9a299!2z0KHQsNC80LDRgNC60LDQvdC0INCU0LDQstC70LDRgiDQo9C90LjQstC10YDRgdC40YLQtdGC0LgsIDE1IFVuaXZlcnNpdGV0IHhpeW9ib25pLCBTYW1hcnFhbmQsIE9gemJla2lzdG9u!5e0!3m2!1suz!2s!4v1683710519026!5m2!1suz!2s" width="475px" height="300" style={{border:"0",borderRadius:"15px"}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"/>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3052.185959147006!2d65.36759297651867!3d40.093566675244176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f51c7784ada55fd%3A0xc72c7fd7cecb4416!2sNavoiy%20innovatsiyalar%20instituti!5e0!3m2!1suz!2s!4v1703770607241!5m2!1suz!2s" width="475" height="300" style={{border:"0",borderRadius:"15px"}} allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
         </div>
     </div>
         <div className="col-12 v-line"></div>
-        <div className="row">
+        <div className="row w-100">
             <div className="col-lg-12 col-md-12 col-sm-12 text-copyright">© 2023 Navoiy innovatsiyalar universiteti, All Rights Reserved. Created By <span className="text-warning">Startapp.uz</span></div>
             
         </div>

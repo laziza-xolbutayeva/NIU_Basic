@@ -12,5 +12,15 @@ const req = {
     getRegistrationExamDate: () => axios(`${baseURL}/Registration/ExamDate`),
     getRegistrationGeneralInfo: () => axios(`${baseURL}/Registration/GeneralInfo`),
     getRegistrationDownload: () => axios(`${baseURL}/Registration/Download`),
+    getNews: () => axios(`${baseURL}/News`),
+    getNewsDetails: () => axios(`${baseURL}/News/Details`),
+    getAnnouncements: () => axios(`${baseURL}/Announsements`),
+    getAnnouncementsDetails: () => axios(`${baseURL}/Announsements/Details`),
+    getGrand: () => axios(`${baseURL}/Grand`),
+    getGrandDetails: () => axios(`${baseURL}/Grand/Details`),
+    getGallery: () => axios(`${baseURL}/Gallery`),
+    getGalleryDetails: () => axios(`${baseURL}/Gallery/Details`),
+    getVideoGallery: () => axios(`${baseURL}/VideoGallery`),
+    getVideoGalleryDetails: () => axios(`${baseURL}/VideoGallery/Details`),
 }
 export default req;
