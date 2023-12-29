@@ -13,7 +13,7 @@ function index() {
         <nav>
           <div className="container  w-100">
             <div className="row align-items-center position-relative">
-              <div className="col-12 col-xl-4 d-flex align-items-center justify-content-between">
+              <div className="col-12 col-xl-3 d-flex align-items-center justify-content-between">
                 <a href="/">
                   <div className="logo">
                     <img
@@ -30,7 +30,7 @@ function index() {
                 </a>
               </div>
               <ul
-                className="col-12 col-xl-6 d-lg-flex d-block justify-content-between  nav-list pe-4"
+                className="col-12 col-xl-7 d-lg-flex d-block justify-content-between align-items-center  nav-list pe-4"
                 id="nav-list"
               >
                 <li className="list-inline-item nav-submenu menu-type-1">
@@ -74,9 +74,9 @@ function index() {
                       </a>
                       <ul>
                         <li className="menu-type-2">
-                          <a href="/uz/pages/university" data-turbo="true">
+                          <NavLink to="/UniversityAbout/Documents" data-turbo="true">
                             Universitet
-                          </a>
+                          </NavLink>
                         </li>
                         <li className="menu-type-2">
                           <a

@@ -6,9 +6,7 @@ function home() {
 
   return (
     <>
-      <Navbar/>
       <Announcement/>
-      <Footer/>
     </>
   )
 }

@@ -1,4 +1,4 @@
-import Registration from "../components/registration/index"
+import Registration from "../../components/registration/index"
 
 function home() {
 

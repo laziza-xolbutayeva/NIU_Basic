@@ -1,4 +1,4 @@
-import RegistrationExamDate from "../components/registrationExamDate"
+import RegistrationExamDate from "../../components/registrationExamDate"
 
 function home() {
 

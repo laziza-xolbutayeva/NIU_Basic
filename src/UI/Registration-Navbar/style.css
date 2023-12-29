@@ -54,7 +54,7 @@ ul .nav-submenu>a::after {
     display: flex;
     align-items: center;
     gap: 6px;
-    cursor: pointer;margin-top: 35px;
+    cursor: pointer;
 }
 
 li a i {

@@ -22,5 +22,6 @@ const req = {
     getGalleryDetails: () => axios(`${baseURL}/Gallery/Details`),
     getVideoGallery: () => axios(`${baseURL}/VideoGallery`),
     getVideoGalleryDetails: () => axios(`${baseURL}/VideoGallery/Details`),
+    getDocuments: () => axios(`${baseURL}/UniversityAbout/Documents`),
 }
 export default req;

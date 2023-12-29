@@ -1,4 +1,4 @@
-import RegistrationPasInfo from "../components/registrationPasInfo/index"
+import RegistrationPasInfo from "../../components/registrationPasInfo/index"
 
 function home() {
 
