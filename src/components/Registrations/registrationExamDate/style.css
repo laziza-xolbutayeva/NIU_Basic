@@ -1,0 +1,70 @@
+.regExamDate-wrapper{
+    background: #F6F6F6;
+    min-width: 100vh;
+}
+.container {
+    /* width: 1200px; */
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.regExamDate{padding-top: 50px;
+    padding-bottom: 50px;
+}
+.regExamDate_box{
+    margin: auto;
+    width: 960px;
+    padding: 30px 60px;
+    background: #fff;
+    border-radius: 15px;
+}
+.regExamDate_box h3{
+    font-family: Montserrat;
+font-size: 20px;
+font-weight: 600;
+line-height: 23px;
+letter-spacing: 0em;
+color: #198A29;
+text-align: center;
+
+}
+.regExamDate_box p{
+    font-family: Montserrat;
+font-size: 16px;
+font-weight: 500;
+line-height: 23px;
+letter-spacing: 0em;
+text-align: center;
+color: #737373;
+}
+.regExamDate-form label{
+    font-family: Inter;
+font-size: 14px;
+font-weight: 600;
+line-height: 23px;
+letter-spacing: 0px;
+text-align: left;
+margin-bottom: 9px;
+color: #6C6C6C;
+
+}
+.regExamDate-form p{
+    font-family: Montserrat;
+font-size: 16px;
+font-weight: 600;
+line-height: 23px;
+letter-spacing: 0em;
+text-align: left;
+color: #000;
+}
+.regExamDate-form select{
+    width: 840px;
+height: 45px;
+border-radius: 6px;
+border: 1px solid #D9D9D9;
+padding: 12px;
+}
+.regNoContinue{
+    background: rgba(25, 138, 41, 0.5);
+}

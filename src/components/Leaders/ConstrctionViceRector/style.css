@@ -1,0 +1,62 @@
+.leaders_name{
+    border-radius: 15px;
+    background: #fff;
+    width: 100%;
+}
+.leaders_name_box{
+    padding: 40px 60px 0 60px;
+}
+.leaders_name_box_title{
+    font-family: Poppins;
+font-size: 40px;
+font-weight: 600;
+line-height: 48px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+.leaders_name_box_text{font-family: Poppins;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #53545B;
+    }
+.leaders_name_box_contact{
+margin: 40px 0;
+}
+.leaders_name_box_contact_title{
+    font-family: Poppins;
+font-size: 16px;
+font-weight: 500;
+line-height: 16px;
+letter-spacing: 0em;
+text-align: left;
+color: rgba(0, 0, 0, 0.6);
+}
+.leaders_name_box_contact_text{
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000;
+    }
+    .leaders_biography{
+        padding: 40px 30px;
+        background: #fff;
+        border-radius: 15px;
+        min-height: 600px;
+        margin-top: 20px;
+    }
+.leaders_biography_title{
+    font-family: Poppins;
+font-size: 32px;
+font-weight: 600;
+line-height: 38px;
+letter-spacing: 0em;
+color: #000;
+
+}

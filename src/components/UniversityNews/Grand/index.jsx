@@ -10,7 +10,7 @@ function index() {
       <section className="index-Grand">
         <div className="container">
           <div className="col-12">
-            <ul className="Grand-title d-flex">
+            <ul className="News-title d-flex">
               <li>
                 <NavLink to="/">Asosiy</NavLink>
               </li>
@@ -18,12 +18,12 @@ function index() {
                 <NavLink to="/">Universitet yangiliklari</NavLink>
               </li>
               <li>
-                <NavLink to="/Grand" className="Grand-title-now">
+                <NavLink to="/Grand" className="News-title-now">
                   Xalqaro grand-stipendiyalari
                 </NavLink>
               </li>
             </ul>
-            <h3 className="Grand-title-h">Xalqaro grand-stipendiyalari</h3>
+            <h3 className="News-title-h">Xalqaro grand-stipendiyalari</h3>
           </div>
           <div className="row mt-5">
             <div className="col-4">

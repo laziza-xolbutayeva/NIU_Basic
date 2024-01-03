@@ -1,4 +1,4 @@
-import RegistrationSMS from "../../components/registrationSMS/index"
+import RegistrationSMS from "../../components/Registrations/registrationSMS/index"
 
 function home() {
 

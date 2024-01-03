@@ -1,0 +1,125 @@
+.registrationSMS-wrapper{
+    background: #F6F6F6;
+    height: 86vh;
+}
+.container {
+    /* width: 1200px; */
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.registrationSMS{padding-top: 50px;
+    padding-bottom: 50px;
+}
+.registrationSMS_box{
+    margin: auto;
+    width: 960px;
+    padding: 30px 60px;
+    background: #fff;
+    border-radius: 15px;
+}
+.registrationSMS_box h3{
+    font-family: Montserrat;
+font-size: 20px;
+font-weight: 600;
+line-height: 23px;
+letter-spacing: 0em;
+color: #198A29;
+text-align: center;
+
+}
+.registrationSMS_box p{
+    font-family: Montserrat;
+font-size: 16px;
+font-weight: 500;
+line-height: 23px;
+letter-spacing: 0em;
+text-align: center;
+color: #737373;
+}
+.main {
+    display: grid;
+    justify-content: center;
+}
+.label {
+    font-size: 14px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: var(--text-color);
+}
+.fieldset {
+    position: relative;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    column-gap: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+    will-change: transform;
+    /* make shadows of inner elements visible */
+    padding: 6px;
+    margin: -6px;
+  }
+  .fieldset::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-100%);
+  }
+  
+  
+  .box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    border: 1px solid #D9D9D9;
+    border-radius:15px;
+    overflow: hidden;
+    will-change: transform;
+    background: #F9F9F9;
+    margin: 60px 12px 30px 12px;
+  }
+  
+  .field {
+    position: relative;
+    border: 0;
+    outline: 0;
+    font-size: 25.21px;
+    line-height: 42px;
+    color: #737373;
+    background-color: transparent;
+    text-align: center;
+    z-index: 1000;
+  }
+  .field::placeholder {
+    color: var(--placeholder-color);
+  }
+  .Confirmation_btn{
+    
+    margin-top: 60px;
+    width: 140px;
+    height: 45px;
+    background: rgba(25, 138, 41, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+  }
+  .registrationSMS_contact{
+    font-family: Poppins;
+font-size: 20px;
+font-weight: 500;
+line-height: 17px;
+letter-spacing: 0em;
+text-align: center;
+color: #198A29;
+margin-top: 60px;
+
+}

@@ -12,11 +12,20 @@
   }
   .Grand-title li a {
     text-decoration: none;
-    color: rgba(0, 0, 0, 1);
+    color: #000;
     padding: 0 25px 0 0;
+    font-family: Poppins;
+font-size: 16px;
+font-weight: 500;
+line-height: 26px;
+letter-spacing: 0em;
+
   }
-  .Grand-title li:first-child {
+  /* .Grand-title li:first-child {
     list-style-type: none;
+  } */
+  .Grand-title li:nth-last-child(1) a{
+    color: rgba(115, 115, 115, 1)!important;
   }
   .Grand-title-h {
     border-left: 4px solid #198a29;

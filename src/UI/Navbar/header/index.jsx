@@ -74,46 +74,45 @@ function index() {
                       </a>
                       <ul>
                         <li className="menu-type-2">
-                          <NavLink to="/UniversityAbout/Documents" data-turbo="true">
+                          <NavLink to="/UniversityAbout/University" data-turbo="true">
                             Universitet
                           </NavLink>
                         </li>
                         <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/university_history"
-                            data-turbo="true"
+                          <NavLink
+                          to="/UniversityAbout/History" 
                           >
                             Universitet tarixi
-                          </a>
+                          </NavLink>
                         </li>
                         <li className="menu-type-2">
-                          <a href="/uz/universitet-nizomi" data-turbo="true">
+                          <NavLink to="/UniversityAbout/Laws" data-turbo="true">
                             Universitet nizomi
-                          </a>
+                          </NavLink>
                         </li>
                         <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/university_structure"
+                          <NavLink
+                            to="/UniversityAbout/Structure"
                             data-turbo="true"
                           >
                             Universitet tuzilmasi
-                          </a>
+                          </NavLink>
                         </li>
                         <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/university_requisites"
+                          <NavLink
+                            to="/UniversityAbout/Requisites"
                             data-turbo="true"
                           >
                             Rekvizitlar
-                          </a>
+                          </NavLink>
                         </li>
                         <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/university_contact"
+                          <NavLink
+                            to="/UniversityAbout/Contact"
                             data-turbo="true"
                           >
-                            Aloqa
-                          </a>
+                            Bog'lanish
+                          </NavLink>
                         </li>
                       </ul>
                     </li>
@@ -123,62 +122,46 @@ function index() {
                       </a>
                       <ul>
                         <li className="menu-type-2">
-                          <a href="/uz/pages/work-plan" data-turbo="true">
+                          <NavLink to="/Documents/WorkPlan" data-turbo="true">
                             Ish reja
-                          </a>
+                          </NavLink>
                         </li>
                         <li className="menu-type-2">
-                          <a href="/uz/pages/document_laws" data-turbo="true">
+                          <NavLink to="/Documents/Laws" data-turbo="true">
                             Qonunlar
-                          </a>
+                          </NavLink>
                         </li>
                         <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/document_decrees"
-                            data-turbo="true"
-                          >
-                            Farmonlar
-                          </a>
-                        </li>
-                        <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/document_decisions"
-                            data-turbo="true"
-                          >
-                            Qarorlar
-                          </a>
-                        </li>
-                        <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/document_regulations"
+                          <NavLink
+                            to="/Documents/Regulations"
                             data-turbo="true"
                           >
                             Nizomlar va qoidalar
-                          </a>
+                          </NavLink>
                         </li>
                         <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/document_reports"
+                          <NavLink
+                            to="/Documents/Reports"
                             data-turbo="true"
                           >
                             Hisobotlar
-                          </a>
+                          </NavLink>
                         </li>
                         <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/Malaka_talablari"
+                          <NavLink
+                            to="/Documents/Qualification"
                             data-turbo="true"
                           >
                             Malaka talablari
-                          </a>
+                          </NavLink>
                         </li>
                         <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/document_contracts"
+                          <NavLink
+                            to="/Documents/Contracts"
                             data-turbo="true"
                           >
                             Shartnomalar
-                          </a>
+                          </NavLink>
                         </li>
                       </ul>
                     </li>
@@ -193,23 +176,23 @@ function index() {
                       </a>
                       <ul>
                         <li className="menu-type-2">
-                          <a href="/uz/pages/u_rektori" data-turbo="true">
+                          <NavLink to="/Leaders/Rector" data-turbo="true">
                             Universitet rektori
-                          </a>
+                          </NavLink>
                         </li>
                         <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/Oquv_ishlari_prorektor"
+                          <NavLink
+                            to="/Leaders/FirstViceRector"
                             data-turbo="true"
                           >
                             O'quv ishlari bo'yicha birinchi prorektor
-                          </a>
+                          </NavLink>
                         </li>
                         <li className="menu-type-2">
-                          <a href="/uz/pages/oquv_prorektor" data-turbo="true">
+                          <NavLink to="/Leaders/ViceRector" data-turbo="true">
                             
                             O'quv ishlari bo'yicha prorektor
-                          </a>
+                          </NavLink>
                         </li>
                         <li className="menu-type-2">
                           <a
@@ -222,36 +205,36 @@ function index() {
                           </a>
                         </li>
                         <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/innovatsiyalar_boyicha_prorektor"
+                          <NavLink
+                            to="/Leaders/InnovationViceRector"
                             data-turbo="true"
                           >
                             Ilmiy ishlar va innovatsiyalar bo‘yicha prorektor
-                          </a>
+                          </NavLink>
                         </li>
                         <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/Moliya_ishlari_boyicha_prorektor"
+                          <NavLink
+                            to="/Leaders/EconomicViceRector"
                             data-turbo="true"
                           >
                             Moliya va iqtisod ishlari bo'yicha prorektor
-                          </a>
+                          </NavLink>
                         </li>
                         <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/Xalqaro_hamkorlik_boyicha_prorektor"
+                          <NavLink
+                            to="/Leaders/InternationViceRector"
                             data-turbo="true"
                           >
                             Xalqaro hamkorlik bo'yicha prorektor
-                          </a>
+                          </NavLink>
                         </li>
                         <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/Qurulish_ishlari_boyicha_prorektor"
+                          <NavLink
+                            to="/Leaders/ConstructionViceRector"
                             data-turbo="true"
                           >
                             Qurulish-ta'mirlash ishlari bo'yicha prorektor
-                          </a>
+                          </NavLink>
                         </li>
                         <li className="menu-type-2">
                           <a
@@ -270,48 +253,7 @@ function index() {
                       <ul>
                         <li className="menu-type-2">
                           <a href="https://samdukf.uz/" data-turbo="true">
-                            SamDU Kattaqo'rg'on filiali
-                          </a>
-                        </li>
-                        <li className="menu-type-2">
-                          <a href="https://www.samduuf.uz/" data-turbo="true">
-                            SamDU Urgut filiali
-                          </a>
-                        </li>
-                        <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/agrobiotexnologiyalar_va_oziq-ovqat_xavfsizligi_fakulteti"
-                            data-turbo="true"
-                          >
-                            SamDU Agrobiotexnologiyalar va oziq-ovqat
-                            xavfsizligi instituti
-                          </a>
-                        </li>
-                        <li className="menu-type-2">
-                          <a href="/uz/pages/physics_faculty" data-turbo="true">
-                            SamDU Muhandislik fizikasi instituti
-                          </a>
-                        </li>
-                        <li className="menu-type-2">
-                          <a href="/uz/pages/Turkology" data-turbo="true">
-                            SamDU Turkologiya ilmiy-tadqiqot instituti
-                          </a>
-                        </li>
-                        <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/inson_resurslarini_boshqarish_fakulteti"
-                            data-turbo="true"
-                          >
-                            SamDU Inson resurslari va mahalla taraqqiyotini
-                            boshqarish instituti
-                          </a>
-                        </li>
-                        <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/Biokimyo_instituti"
-                            data-turbo="true"
-                          >
-                            SamDU Biokimyo instituti
+                            NIU filiali
                           </a>
                         </li>
                       </ul>

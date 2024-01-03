@@ -13,6 +13,7 @@
   border-radius: 15px;
   background: rgba(21, 123, 35, 0.08);
   padding: 17px 20px;
+  list-style-type: disc!important;
 }
 .News-title li a {
   text-decoration: none;
@@ -26,8 +27,11 @@ text-align: left;
 
   padding: 0 25px 0 0;
 }
-.News-title li:first-child {
+/* .News-title li:first-child {
   list-style-type: none;
+} */
+.News-title li:nth-last-child(1) a{
+  color: rgba(115, 115, 115, 1)!important;
 }
 .News-title-h {
   border-left: 4px solid #198a29;

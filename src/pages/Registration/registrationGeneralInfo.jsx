@@ -1,4 +1,4 @@
-import RegistrationGeneralInfo from "../../components/registrationGeneralInfo/index"
+import RegistrationGeneralInfo from "../../components/Registrations/registrationGeneralInfo/index"
 
 function home() {
 

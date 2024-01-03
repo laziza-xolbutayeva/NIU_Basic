@@ -1,0 +1,40 @@
+.registrationInfo-wrapper{
+    background: #F6F6F6;
+    height: 86vh;
+}
+.container {
+    /* width: 1200px; */
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.registrationInfo{padding-top: 50px;
+    padding-bottom: 50px;
+}
+.registrationInfo_box{
+    margin: auto;
+    width: 960px;
+    padding: 30px 60px;
+    background: #fff;
+    border-radius: 15px;
+}
+.registrationInfo_box h3{
+    font-family: Montserrat;
+font-size: 20px;
+font-weight: 600;
+line-height: 23px;
+letter-spacing: 0em;
+color: #198A29;
+text-align: center;
+
+}
+.registrationInfo_box p{
+    font-family: Montserrat;
+font-size: 16px;
+font-weight: 500;
+line-height: 23px;
+letter-spacing: 0em;
+text-align: center;
+color: #737373;
+}

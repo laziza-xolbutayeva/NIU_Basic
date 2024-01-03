@@ -1,4 +1,4 @@
-import RegDirection from "../../components/registrationDirection/index"
+import RegDirection from "../../components/Registrations/registrationDirection/index"
 
 function home() {
 

@@ -1,4 +1,4 @@
-import RegistrationPrevEdu from "../../components/registrationPrevEdu/index"
+import RegistrationPrevEdu from "../../components/Registrations/registrationPrevEdu/index"
 
 function home() {
 

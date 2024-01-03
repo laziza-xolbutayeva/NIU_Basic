@@ -1,4 +1,4 @@
-import RegDownload from "../../components/registrationDownload/index"
+import RegDownload from "../../components/Registrations/registrationDownload/index"
 
 function home() {
 

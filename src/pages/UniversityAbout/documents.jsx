@@ -6,11 +6,7 @@ import { Routes, Route } from "react-router-dom";
 function home() {
   return (
     <>
-      <Navbar />
-      <Routes>
-        <Route path="/UniversityAbout/Documents" element={<Documents />} />
-      </Routes>
-      <Footer />
+    <Documents/>
     </>
   );
 }
