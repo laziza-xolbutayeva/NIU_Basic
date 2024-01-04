@@ -4,9 +4,11 @@ import flag from "../../../assets/uzb-flag.svg";
 import russian from "../../../assets/russia-flag-circular-17765.svg";
 import english from "../../../assets/united_kingdom.svg";
 import {NavLink} from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 
 function index() {
+  const [t, i18n]=useTranslation("global");
   return (
     <>
       <div className="header-sticky">
@@ -14,7 +16,7 @@ function index() {
           <div className="container  w-100">
             <div className="row align-items-center position-relative">
               <div className="col-12 col-xl-3 d-flex align-items-center justify-content-between">
-                <a href="/">
+                <NavLink to="/">
                   <div className="logo">
                     <img
                       src={logo}
@@ -24,7 +26,7 @@ function index() {
                     Navoiy innovatsiyalar universiteti
                     </p>
                   </div>
-                </a>
+                </NavLink>
                 <a href="#" className="menu-btn" id="menu-btn">
                   <i className="bi bi-list"></i>
                 </a>
@@ -34,36 +36,36 @@ function index() {
                 id="nav-list"
               >
                 <li className="list-inline-item nav-submenu menu-type-1">
-                  <a data-turbo="true">Universitet</a>
+                  <a data-turbo="true">{t("basic.menu.university.university")}</a>
                   <ul>
                     <li className="nav-submenu menu-type-2">
                       <a href="#" data-turbo="true">
-                        Universitet yangiliklari
+                      {t("basic.menu.university.university news.university news")}
                       </a>
                       <ul>
                         <li className="menu-type-2">
                           <NavLink to="/News" data-turbo="true">
-                            Yangiliklar
+                          {t("basic.menu.university.university news.news")}
                           </NavLink>
                         </li>
                         <li className="menu-type-2">
                           <NavLink to="/Announcements" data-turbo="true">
-                            E'lonlar
+                          {t("basic.menu.university.university news.announcements")}
                           </NavLink>
                         </li>
                         <li className="menu-type-2">
                           <NavLink to="/Grand" data-turbo="true">
-                            Xalqaro grant-stipendiyalar
+                          {t("basic.menu.university.university news.grands")}
                           </NavLink>
                         </li>
                         <li className="menu-type-2">
                           <NavLink to="/Gallery" data-turbo="true">
-                            Fotogalereya
+                          {t("basic.menu.university.university news.photo")}
                           </NavLink>
                         </li>
                         <li className="menu-type-2">
                           <NavLink to="/VideoGallery" data-turbo="true">
-                            Videogalereya
+                          {t("basic.menu.university.university news.video")}
                           </NavLink>
                         </li>
                       </ul>

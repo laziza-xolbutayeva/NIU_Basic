@@ -1,0 +1,50 @@
+{
+    "basic":{
+        "menu":{
+            "university":{
+                "university":"University",
+                "university news":{
+                    "university news":"University news",
+                    "news":"News",
+                    "announcements":"Announcements",
+                    "grands":"International grand scholarships",
+                    "photo":"Photo gallery",
+                    "video":"Video gallery"
+                },
+                "university about":{
+                    "university about":"University about",
+                    "university":"University",
+                    "history":"University history",
+                    "charter":"University charter",
+                    "structure":"University structure",
+                    "requisites":"Requisites",
+                    "Contact":"Connection"
+                },
+                "documents":{
+                    "documents":"Documents",
+                    "plan":"Work plan",
+                    "laws":"Laws",
+                    "regulations":"Statutes and regulations",
+                    "reports":"Reports",
+                    "requirement":"Qualification requirements",
+                    "contracts":"Contracts"
+                }
+            },
+            "Structure":{
+                "structure":"Structure",
+                "management":{
+                    "management":"Management",
+                    "rector":"Rector of the university",
+                    "first vice-rector":"The first vice-rector for academic affairs",
+                    "vice-rector":"The first vice-rector for academic affairs",
+                    "youth affairs vice-rector":"The first vice-rector for youth issues and spiritual and educational affairs",
+                    "innovations vice-rector":"Vice-rector for scientific affairs and innovations",
+                    "economic vice-rector":"Vice-rector for financial and economic affairs",
+                    "international vice-rector":"Vice-rector for international cooperation",
+                    "construction vice-rector":"Vice-rector for construction and repair works",
+                    "transformation":"Office of Transformation"
+                }
+            }
+        }
+    }
+}

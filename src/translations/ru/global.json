@@ -1,0 +1,50 @@
+{
+    "basic":{
+        "menu":{
+            "university":{
+                "university":"Университет",
+                "university news":{
+                    "university news":"Новости университета",
+                    "news":"Новости",
+                    "announcements":"Объявления",
+                    "grands":"Международные гранты-стипендии",
+                    "photo":"Фотогалерея",
+                    "video":"Видео галерея"
+                },
+                "university about":{
+                    "university about":"Об университете",
+                    "university":"Университет",
+                    "history":"История университета",
+                    "charter":"Устав университета",
+                    "structure":"Структура университета",
+                    "requisites":"Реквизит",
+                    "Contact":"Связь"
+                },
+                "documents":{
+                    "documents":"Документы",
+                    "plan":"План работы",
+                    "laws":"Законы",
+                    "regulations":"Уставы и положения",
+                    "reports":"Отчеты",
+                    "requirement":"Квалификационные требования",
+                    "contracts":"Соглашения"
+                }
+            },
+            "Structure":{
+                "structure":"Состав",
+                "management":{
+                    "management":"Лидерство",
+                    "rector":"ректор университета",
+                    "first vice-rector":"Первый проректор по учебной работе",
+                    "vice-rector":"Проректор по учебной работе",
+                    "youth affairs vice-rector":"Первый проректор по делам молодежи и духовно-просветительской работе",
+                    "innovations vice-rector":"Проректор по научной работе и инновациям",
+                    "economic vice-rector":"Проректор по финансово-экономическим вопросам",
+                    "international vice-rector":"Проректор по международному сотрудничеству",
+                    "construction vice-rector":"Проректор по строительным и ремонтным работам",
+                    "transformation":"Офис трансформации"
+                }
+            }
+        }
+    }
+}

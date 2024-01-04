@@ -1,8 +1,24 @@
-import { NavLink } from 'react-router-dom'
-import img from '../../../assets/leaders_img.svg'
-import "./style.css"
+import  { useState, useEffect } from "react";
+import { NavLink } from 'react-router-dom';
+import img from '../../../assets/leaders_img.svg';
+import "./style.css";
+import { req } from "../../../API/API/index";
+import { baseURL } from "../../../API/API/index";
 
 function index() {
+  const [data, setData] = useState([]);
+  const fetchData = async () => {
+    try {
+      const result = await req.getRector();
+      setData(result);
+      
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);
   return (
     <>
       <section className="index-News">
@@ -25,7 +41,7 @@ function index() {
               </li>
             </ul>
             <h3 className="News-title-h">
-              Universitet rektori
+              {data.name}
             </h3>
           </div>
           <div className="leaders-wrapper">
@@ -33,30 +49,30 @@ function index() {
               <img src={img} alt="" />
               <div className="leaders_name_box">
                 <h3 className="leaders_name_box_title">
-                  Ism Famliya Otasing ismi
+                  {data.fio}
                 </h3>
                 <p className="leaders_name_box_text">
-                Navoiy innovatsiyalar universiteti rektori
+                {data.name}
                 </p>
                 <div className="d-flex justify-content-between">
                   <div>
                     <div className="leaders_name_box_contact">
                       <p className="leaders_name_box_contact_title">Qabul:</p>
                       <p className="leaders_name_box_contact_text">
-                        Chorshanba, 16.00-18.00
+                      {data.reception_time}
                       </p>
                     </div>
                     <div className="leaders_name_box_contact">
                       <p className="leaders_name_box_contact_title">E-mail:</p>
                       <p className="leaders_name_box_contact_text">
-                        rektor@niu.uz
+                      {data.email}
                       </p>
                     </div>
                   </div>
                   <div className="leaders_name_box_contact">
                     <p className="leaders_name_box_contact_title">Telefon:</p>
                     <p className="leaders_name_box_contact_text">
-                      +998 71 000-00-00
+                      +998 {data.number}
                     </p>
                   </div>
                 </div>

@@ -1,8 +1,25 @@
 import "./style.css";
 import img from "../../../assets/newsdetail.svg";
 import { NavLink } from "react-router-dom";
+import { useState,useEffect } from "react";
+import { req } from "../../../API/API/index";
+import { baseURL } from "../../../API/API/index";
 
 function index() {
+  // const [data, setData] = useState([]);
+  // const fetchData = async () => {
+  //   try {
+  //     const result = await req.getNews();
+  //     console.log(result.results)
+  //     setData(result.results);
+  //     console.log(data)
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
   return (
     <>
       <section className="index-News">
@@ -26,7 +43,7 @@ function index() {
                 </NavLink>
               </li>
             </ul>
-            <h3 className="News-title-h mb-5 mt-3">Universitet talabalari o'rtasida "Zakovat" intellektual o'yini o'tkazildi.</h3>
+            <h3 className="News-title-h mb-5 mt-3">Universitet talabalari o'rtasida "Zakovat" intellektual o'yi...</h3>
           </div>
           <div className="NewsDetail_Card d-flex">
             <img src={img} alt="" className="NewsDetail_Card_img"/>

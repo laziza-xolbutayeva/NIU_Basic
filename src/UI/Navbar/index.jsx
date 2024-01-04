@@ -26,17 +26,17 @@ function index() {
                       </a>
                     </li>
                     <li className="toplist-inline-item hidden-mobile">
-                      <a href="#">
+                      <a href="https://www.instagram.com/niuedu.uz/">
                         <img src={instagram} alt="" />
                       </a>
                     </li>
                     <li className="toplist-inline-item hidden-mobile">
-                      <a href="#">
+                      <a href="https://www.facebook.com/people/NiUUZ/100092875050918/">
                         <img src={facebook} alt="" />
                       </a>
                     </li>
                     <li className="toplist-inline-item hidden-mobile">
-                      <a href="#">
+                      <a href="https://www.youtube.com/@niuedu_uz">
                         <img src={youtube} alt="" />
                       </a>
                     </li>

@@ -1,6 +1,7 @@
-import axios from "axios"
+import axios from "axios";
 
-const baseURL = "https://NIU";
+
+const baseURL = "http://niu.hrmanager.uz";
 const req = {
     getHome: () => axios(`${baseURL}/`),
     getRegistration: () => axios(`${baseURL}/Registration`),
@@ -12,7 +13,12 @@ const req = {
     getRegistrationExamDate: () => axios(`${baseURL}/Registration/ExamDate`),
     getRegistrationGeneralInfo: () => axios(`${baseURL}/Registration/GeneralInfo`),
     getRegistrationDownload: () => axios(`${baseURL}/Registration/Download`),
-    getNews: () => axios(`${baseURL}/News`),
+    getNews: async () => {
+        const response = await axios.get(`${baseURL}/news/?d=news`);
+        if (response.status === 200) {
+            return response.data;
+        }
+    },
     getNewsDetails: () => axios(`${baseURL}/News/Details`),
     getAnnouncements: () => axios(`${baseURL}/Announsements`),
     getAnnouncementsDetails: () => axios(`${baseURL}/Announsements/Details`),
@@ -38,7 +44,12 @@ const req = {
     getFirstViceRector: () => axios(`${baseURL}/Leaders/FirstViceRector`),
     getInnovationViceRector: () => axios(`${baseURL}/Leaders/InnovationViceRector`),
     getInternationalViceRector: () => axios(`${baseURL}/Leaders/InternationalViceRector`),
-    getRector: () => axios(`${baseURL}/Leaders/Rector`),
+    getRector:async () => {
+        const response = await axios.get(`${baseURL}/structure/leadership/u_rektor/`);
+        if (response.status === 200) {
+            return response.data;
+        }
+    },
     getViceRector: () => axios(`${baseURL}/Leaders/ViceRector`),
 }
-export default req;
+export {req, baseURL}

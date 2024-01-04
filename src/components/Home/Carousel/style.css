@@ -23,7 +23,12 @@ position: relative;
 
 @keyframes scroll {
 	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-250px * 7))}
+	100% { transform: translateX(-1169px)}
+}
+.carousel-caption{
+	right: 0%!important;
+	left: 0%!important;
+	bottom: 64px!important;
 }
 .slider {
 	background: rgba(21, 123, 35, 0.57);
@@ -36,12 +41,13 @@ position: relative;
 }
 	.slider::before,
 	.slider::after {
-		background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+		/* background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); */
 		content: "";
 		height: 1169px;
 		position: absolute;
 		width: 200px;
 		z-index: 2;
+
 	}
 	
 	.slider::after {
@@ -58,7 +64,7 @@ position: relative;
 	.slide-track {
 		animation: scroll 40s linear infinite;
 		display: flex;
-		width: calc(250px * 14);
+		width: 1169px;
 	}
 	
 	.slide {
@@ -66,12 +72,13 @@ position: relative;
 		width: 1169px;
 	}
     .slide p{
-font-size: 48px;
+		padding-top: 12px;
+color: #fff;
+font-family: Poppins;
+font-size: 45px;
 font-weight: 500;
 line-height: 60px;
 letter-spacing: 0em;
-text-align: left;
-color: #fff;
 
     }
 

@@ -39,7 +39,7 @@ function index() {
                   <div className="slider">
                     <div className="slide-track">
                       <div className="slide">
-                        <p>Navoiy innovatsiyalaruniversitetiga xush kelibsiz</p>
+                        <p>Navoiy innovatsiyalar universitetiga xush kelibsiz</p>
                       </div>
                     </div>
                   </div>
@@ -48,20 +48,25 @@ function index() {
               <div className="carousel-item" data-bs-interval="2000">
                 <img src={img} className="d-block w-100" alt="..."></img>
                 <div className="carousel-caption d-none d-md-block">
-                  <h5>Second slide label</h5>
-                  <p>
-                    Some representative placeholder content for the second
-                    slide.
-                  </p>
+                <div className="slider">
+                    <div className="slide-track">
+                      <div className="slide">
+                        <p>Navoiy innovatsiyalar universitetiga xush kelibsiz</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="carousel-item">
                 <img src={img} className="d-block w-100" alt="..."></img>
                 <div className="carousel-caption d-none d-md-block">
-                  <h5>Third slide label</h5>
-                  <p>
-                    Some representative placeholder content for the third slide.
-                  </p>
+                <div className="slider">
+                    <div className="slide-track">
+                      <div className="slide">
+                        <p>Navoiy innovatsiyalar universitetiga xush kelibsiz</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

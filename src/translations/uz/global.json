@@ -1,0 +1,50 @@
+{
+    "basic":{
+        "menu":{
+            "university":{
+                "university":"Universitet",
+                "university news":{
+                    "university news":"Universitet yangiliklari",
+                    "news":"Yangiliklar",
+                    "announcements":"E'lonlar",
+                    "grands":"Xalqaro grant-stipendiyalar",
+                    "photo":"Fotogalereya",
+                    "video":"Videogalereya"
+                },
+                "university about":{
+                    "university about":"Universitet haqida",
+                    "university":"Universitet",
+                    "history":"Universitet tarixi",
+                    "charter":"Universitet nizomi",
+                    "structure":"Universitet tuzulmasi",
+                    "requisites":"Rekvizitlar",
+                    "Contact":"Bog'lanish"
+                },
+                "documents":{
+                    "documents":"Hujjatlar",
+                    "plan":"Ish rejasi",
+                    "laws":"Qonunlar",
+                    "regulations":"Nizomlar va qoidalar",
+                    "reports":"Hisobotlar",
+                    "requirement":"Malaka talablari",
+                    "contracts":"Shartnomalar"
+                }
+            },
+            "Structure":{
+                "structure":"Tuzilma",
+                "management":{
+                    "management":"Rahbariyat",
+                    "rector":"Universitet rektori",
+                    "first vice-rector":"O'quv ishlari bo'yicha birinchi prorektor",
+                    "vice-rector":"O'quv ishlari bo'yicha prorektor",
+                    "youth affairs vice-rector":"Yoshlar masalalari va ma’naviy-ma’rifiy ishlar bo‘yicha birinchi prorektor",
+                    "innovations vice-rector":"Ilmiy ishlar va innovatsiyalar bo‘yicha prorektor",
+                    "economic vice-rector":"Moliya va iqtisod ishlari bo'yicha prorektor",
+                    "international vice-rector":"Xalqaro hamkorlik bo'yicha prorektor",
+                    "construction vice-rector":"Qurulish-ta'mirlash ishlari bo'yicha prorektor",
+                    "transformation":"Transformatsiya ofisi"
+                }
+            }
+        }
+    }
+}
