@@ -43,3 +43,12 @@ letter-spacing: 0em;
     border-radius: 15px;
     background-color: #f8f8f8 !important;
   }
+
+  .col-4 .card .card-img-top{
+    height: 300px!important;
+    width: 420px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    position: relative;
+    top: 0;
+  }

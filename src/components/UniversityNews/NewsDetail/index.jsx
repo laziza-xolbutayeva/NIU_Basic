@@ -4,22 +4,14 @@ import { NavLink } from "react-router-dom";
 import { useState,useEffect } from "react";
 import { req } from "../../../API/API/index";
 import { baseURL } from "../../../API/API/index";
+import { useSelector } from "react-redux";
 
 function index() {
-  // const [data, setData] = useState([]);
-  // const fetchData = async () => {
-  //   try {
-  //     const result = await req.getNews();
-  //     console.log(result.results)
-  //     setData(result.results);
-  //     console.log(data)
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // };
-  // useEffect(() => {
-  //   fetchData();
-  // }, []);
+  
+
+  //GETDATA
+  const counter=useSelector((state)=>state.counter);
+console.log(counter);
   return (
     <>
       <section className="index-News">
@@ -30,29 +22,25 @@ function index() {
                 <NavLink to="/">Asosiy</NavLink>
               </li>
               <li>
-                <NavLink to="/News">Universitet yangiliklari</NavLink>
+                <NavLink to="/">Universitet yangiliklari</NavLink>
               </li>
               <li>
-                <NavLink to="/News/Details">
+                <NavLink to="/News">
                   Yangiliklar
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/" className="News-title-now">
+                <NavLink to="/News/Details" className="News-title-now">
                   Batafsil
                 </NavLink>
               </li>
             </ul>
-            <h3 className="News-title-h mb-5 mt-3">Universitet talabalari o'rtasida "Zakovat" intellektual o'yi...</h3>
+            <h3 className="News-title-h mb-5 mt-3">{((counter!=0)?counter.title:'')}</h3>
           </div>
           <div className="NewsDetail_Card d-flex">
-            <img src={img} alt="" className="NewsDetail_Card_img"/>
+            <img src={((counter!=0)?baseURL+counter.image[0].image:img)} alt="" className="NewsDetail_Card_img"/>
             <div className="NewsDetail_Card_box">
-                <p>Kurs talabalarni kredit texnologiyasi va Mirasda o'qitishning o'ziga xos xususiyatlariga moslashtirish, shuningdek, o'qish va hayot uchun foydali ko'nikmalarga ega bo'lish uchun mo'ljallangan.</p>
-                <p>Kurs talabalarni kredit texnologiyasi va Mirasda o'qitishning o'ziga xos xususiyatlariga moslashtirish, shuningdek, o'qish va hayot uchun foydali ko'nikmalarga ega bo'lish uchun mo'ljallangan.</p>
-                <p>Kurs talabalarni kredit texnologiyasi va Mirasda o'qitishning o'ziga xos xususiyatlariga moslashtirish, shuningdek, o'qish va hayot uchun foydali ko'nikmalarga ega bo'lish uchun mo'ljallangan.</p>
-                <p>Kurs talabalarni kredit texnologiyasi va Mirasda o'qitishning o'ziga xos xususiyatlariga moslashtirish, shuningdek, o'qish va hayot uchun foydali ko'nikmalarga ega bo'lish uchun mo'ljallangan.</p>
-                <p>Kurs talabalarni kredit texnologiyasi va Mirasda o'qitishning o'ziga xos xususiyatlariga moslashtirish, shuningdek, o'qish va hayot uchun foydali ko'nikmalarga ega bo'lish uchun mo'ljallangan.</p>
+                <p>{((counter!=0)?counter.text:'')}</p>
             </div>
           </div>
         </div>

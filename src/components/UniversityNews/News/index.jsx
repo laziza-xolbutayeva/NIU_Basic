@@ -5,12 +5,15 @@ import eye from "../../../assets/eyes.svg";
 import { NavLink } from "react-router-dom";
 import { req } from "../../../API/API/index";
 import { baseURL } from "../../../API/API/index";
+import { useDispatch, useSelector } from "react-redux";
 function index() {
+  // GET DATA
   const [data, setData] = useState([]);
   const fetchData = async () => {
     try {
       const result = await req.getNews();
       setData(result.results);
+      console.log(result.results);
     } catch (err) {
       console.log(err);
     }
@@ -18,6 +21,13 @@ function index() {
   useEffect(() => {
     fetchData();
   }, []);
+
+  // SEND DATA
+    const dispatch=useDispatch();
+  const toggleData=(newData)=>{
+    dispatch({type:'newDataChange',newData:newData})
+  }
+
   return (
     <>
       <section className="index-News">
@@ -28,10 +38,10 @@ function index() {
                 <NavLink to="/">Asosiy</NavLink>
               </li>
               <li>
-                <NavLink to="/News">Universitet yangiliklari</NavLink>
+                <NavLink to="/">Universitet yangiliklari</NavLink>
               </li>
               <li>
-                <NavLink to="/" className="News-title-now">
+                <NavLink to="/News" className="News-title-now">
                   Yangiliklar
                 </NavLink>
               </li>
@@ -39,11 +49,12 @@ function index() {
             <h3 className="News-title-h">Yangiliklar</h3>
           </div>
           <div className="row mt-5">
-            {data.map((obj) => {
+            {data.map((obj,i) => {
+              console.log(i)
               return (
                 <>
                   <div className="col-3">
-                    <NavLink to="/News/Details">
+                    <NavLink to="/News/Details" onClick={()=>toggleData(obj)}>
                       <div
                         className="card position-relative"
                         style={{ width: "310px" }}
@@ -77,7 +88,6 @@ function index() {
               );
             })}
             
-
             <div className="pagination d-flex justify-content-center">
               <ul>
                 <li>

@@ -20,9 +20,19 @@ const req = {
         }
     },
     getNewsDetails: () => axios(`${baseURL}/News/Details`),
-    getAnnouncements: () => axios(`${baseURL}/Announsements`),
+    getAnnouncements:async () => {
+        const response = await axios.get(`${baseURL}/news/?d=announcement`);
+        if (response.status === 200) {
+            return response.data;
+        }
+    },
     getAnnouncementsDetails: () => axios(`${baseURL}/Announsements/Details`),
-    getGrand: () => axios(`${baseURL}/Grand`),
+    getGrand:async () => {
+        const response = await axios.get(`${baseURL}/news/?d=scholarship`);
+        if (response.status === 200) {
+            return response.data;
+        }
+    } ,
     getGrandDetails: () => axios(`${baseURL}/Grand/Details`),
     getGallery: () => axios(`${baseURL}/Gallery`),
     getGalleryDetails: () => axios(`${baseURL}/Gallery/Details`),

@@ -1,0 +1,10 @@
+tuzilma/rahbariyat/rektor api
+http://niu.hrmanager.uz/structure/leadership/u_rektor/
+
+universitet/universite yangiliklar/yangiliklar
+http://niu.hrmanager.uz/news/?d=news
+    ('news', "Yangiliklar"),
+    ('announcement', "E'lon"),
+    ('foto', "FOTO"),
+    ('video', "VIDEO"),
+    ('scholarship', "Sipendiya"),

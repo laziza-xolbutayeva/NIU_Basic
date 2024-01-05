@@ -1,24 +1,28 @@
-import  { useState, useEffect } from "react";
-import { NavLink } from 'react-router-dom';
-import img from '../../../assets/leaders_img.svg';
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
+import img from "../../../assets/leaders_img.svg";
 import "./style.css";
 import { req } from "../../../API/API/index";
 import { baseURL } from "../../../API/API/index";
 
 function index() {
   const [data, setData] = useState([]);
+  const [bio, setBio] = useState([]);
+  const [task, setTask] = useState([]);
   const fetchData = async () => {
     try {
       const result = await req.getRector();
       setData(result);
-      
+      setBio(result.biography);
+      setTask(result.task);
+      console.log(result);
     } catch (err) {
       console.log(err);
     }
   };
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [data]);
   return (
     <>
       <section className="index-News">
@@ -40,32 +44,26 @@ function index() {
                 </NavLink>
               </li>
             </ul>
-            <h3 className="News-title-h">
-              {data.name}
-            </h3>
+            <h3 className="News-title-h">{data.name}</h3>
           </div>
           <div className="leaders-wrapper">
             <div className="leaders_name d-flex">
-              <img src={img} alt="" />
+              <img src={baseURL+data.image} alt="" />
               <div className="leaders_name_box">
-                <h3 className="leaders_name_box_title">
-                  {data.fio}
-                </h3>
-                <p className="leaders_name_box_text">
-                {data.name}
-                </p>
+                <h3 className="leaders_name_box_title">{data.fio}</h3>
+                <p className="leaders_name_box_text">{data.name}</p>
                 <div className="d-flex justify-content-between">
                   <div>
                     <div className="leaders_name_box_contact">
                       <p className="leaders_name_box_contact_title">Qabul:</p>
                       <p className="leaders_name_box_contact_text">
-                      {data.reception_time}
+                        {data.reception_time}
                       </p>
                     </div>
                     <div className="leaders_name_box_contact">
                       <p className="leaders_name_box_contact_title">E-mail:</p>
                       <p className="leaders_name_box_contact_text">
-                      {data.email}
+                        {data.email}
                       </p>
                     </div>
                   </div>
@@ -79,17 +77,35 @@ function index() {
               </div>
             </div>
             <div className="leaders_biography">
-                <h2 className="text-center leaders_biography_title">Biografiya</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sunt sint exercitationem autem aut ipsam quibusdam perspiciatis commodi illo itaque asperiores iure laudantium nisi impedit quod mollitia ex voluptates officia eum pariatur, error excepturi ipsum? Corporis fugit, harum iusto nesciunt excepturi placeat explicabo aliquam consequuntur id tempora vel dicta quo, dolores, eveniet sunt incidunt dolore facere doloribus. Adipisci error vitae eveniet enim possimus nesciunt fugiat. A ipsa, amet architecto fugit velit modi vitae, ullam non eligendi adipisci sed. Eum ea itaque accusantium quidem atque debitis provident aut labore, quos, fuga eligendi doloremque! Placeat a, aut quod consectetur repudiandae dignissimos eum doloribus ipsa vitae fugiat distinctio odit officia velit labore. Atque consequuntur iusto reprehenderit fuga nostrum aspernatur quam consectetur dolore magni? Laboriosam tenetur illum rem iste sequi, alias quidem aperiam deserunt doloribus! Nemo aliquid unde voluptate mollitia perspiciatis necessitatibus rerum sequi commodi pariatur veritatis eius fugit repellat est, sunt magnam, aliquam vel asperiores quia ex reprehenderit laboriosam expedita non. Natus quidem commodi magnam eum mollitia deleniti delectus tenetur assumenda error nobis voluptatibus esse praesentium fugiat, magni itaque at quis aperiam animi eos quia nihil. Nisi aut fuga architecto sint molestiae possimus inventore expedita labore officiis, corrupti dicta, itaque laborum aspernatur quod placeat voluptate cupiditate temporibus, voluptas dolorum saepe ipsum neque sapiente illo. Quisquam est cumque dolore iste repellendus ipsum quibusdam impedit ratione assumenda quam, quo ab expedita ut, veritatis obcaecati porro fugit culpa perspiciatis odit vitae possimus dignissimos quis! Porro tempore iusto ad. Necessitatibus, odit optio voluptatum facilis at voluptatibus inventore aut aspernatur laborum nostrum quibusdam recusandae alias molestias excepturi ab quia expedita maxime omnis vero voluptas explicabo in rem. Sed corporis, rerum ipsum error consequuntur doloribus sequi quae earum ratione animi, minus esse necessitatibus aperiam placeat, alias tempore delectus voluptatum cum itaque. Ad ea quisquam perferendis, dolor molestiae quos perspiciatis.</p>
+              <h2 className="text-center leaders_biography_title">
+                Biografiya
+              </h2>
+              <ul className="leaders_biography_ul">
+                {bio.map((obj) => {
+                  return (
+                    <>
+                      <li>{obj.text}</li>
+                    </>
+                  );
+                })}
+              </ul>
             </div>
             <div className="leaders_biography">
-                <h2 className="text-center leaders_biography_title">Vazifalar</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sunt sint exercitationem autem aut ipsam quibusdam perspiciatis commodi illo itaque asperiores iure laudantium nisi impedit quod mollitia ex voluptates officia eum pariatur, error excepturi ipsum? Corporis fugit, harum iusto nesciunt excepturi placeat explicabo aliquam consequuntur id tempora vel dicta quo, dolores, eveniet sunt incidunt dolore facere doloribus. Adipisci error vitae eveniet enim possimus nesciunt fugiat. A ipsa, amet architecto fugit velit modi vitae, ullam non eligendi adipisci sed. Eum ea itaque accusantium quidem atque debitis provident aut labore, quos, fuga eligendi doloremque! Placeat a, aut quod consectetur repudiandae dignissimos eum doloribus ipsa vitae fugiat distinctio odit officia velit labore. Atque consequuntur iusto reprehenderit fuga nostrum aspernatur quam consectetur dolore magni? Laboriosam tenetur illum rem iste sequi, alias quidem aperiam deserunt doloribus! Nemo aliquid unde voluptate mollitia perspiciatis necessitatibus rerum sequi commodi pariatur veritatis eius fugit repellat est, sunt magnam, aliquam vel asperiores quia ex reprehenderit laboriosam expedita non. Natus quidem commodi magnam eum mollitia deleniti delectus tenetur assumenda error nobis voluptatibus esse praesentium fugiat, magni itaque at quis aperiam animi eos quia nihil. Nisi aut fuga architecto sint molestiae possimus inventore expedita labore officiis, corrupti dicta, itaque laborum aspernatur quod placeat voluptate cupiditate temporibus, voluptas dolorum saepe ipsum neque sapiente illo. Quisquam est cumque dolore iste repellendus ipsum quibusdam impedit ratione assumenda quam, quo ab expedita ut, veritatis obcaecati porro fugit culpa perspiciatis odit vitae possimus dignissimos quis! Porro tempore iusto ad. Necessitatibus, odit optio voluptatum facilis at voluptatibus inventore aut aspernatur laborum nostrum quibusdam recusandae alias molestias excepturi ab quia expedita maxime omnis vero voluptas explicabo in rem. Sed corporis, rerum ipsum error consequuntur doloribus sequi quae earum ratione animi, minus esse necessitatibus aperiam placeat, alias tempore delectus voluptatum cum itaque. Ad ea quisquam perferendis, dolor molestiae quos perspiciatis.</p>
+              <h2 className="text-center leaders_biography_title">Vazifalar</h2>
+              <ul className="leaders_biography_ul">
+                {task.map((obj) => {
+                  return (
+                    <>
+                      <li>{obj.text}</li>
+                    </>
+                  );
+                })}
+              </ul>
             </div>
           </div>
         </div>
       </section>
     </>
-  )
+  );
 }
-export default index
+export default index;

@@ -33,6 +33,9 @@ text-align: left;
 .News-title li:nth-last-child(1) a{
   color: rgba(115, 115, 115, 1)!important;
 }
+.News-title li:first-child{
+  list-style-type: none;
+}
 .News-title-h {
   border-left: 4px solid #198a29;
   color: #000;
@@ -47,6 +50,7 @@ text-align: left;
 .row a {
   text-decoration: none;
 }
+.col-3 .card {height: 520px;}
 .card {
   border: none !important;
   border-radius: 15px;
@@ -59,6 +63,7 @@ text-align: left;
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
+  height: 72px;
 }
 .card-body p {
   font-family: Poppins;
@@ -73,7 +78,7 @@ text-align: left;
     text-align: center;
 }
 .pagination ul,
-li {
+.pagination li {
   list-style: none;
   display: inline;
   padding-left: 0px;
@@ -125,4 +130,12 @@ li {
 }
 .News-title-now{
     color:#737373;
+}
+
+
+.col-3 .card .card-img-top{
+  height: 210px;
+  width: 310px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }

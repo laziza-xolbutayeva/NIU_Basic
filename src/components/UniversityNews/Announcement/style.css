@@ -2,7 +2,7 @@
     text-align: center;
 }
 .pagination ul,
-li {
+.pagination li {
   list-style: none;
   display: inline;
   padding-left: 0px;
@@ -56,3 +56,4 @@ li {
 .pagination li a:after {
   content: " " counter(pagination) " ";
 }
+.card-img-top{}

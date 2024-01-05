@@ -1,8 +1,12 @@
 import "./style.css";
 import img from "../../../assets/announDetail.svg";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function index() {
+   //GETDATA
+   const counter=useSelector((state)=>state.counter);
+   console.log(counter);
   return (
     <>
       <section className="index-News">

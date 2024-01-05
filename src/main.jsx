@@ -8,6 +8,8 @@ import global_uz from "./translations/uz/global.json";
 import global_ru from "./translations/ru/global.json";
 import i18next from 'i18next';
 import { I18nextProvider } from 'react-i18next';
+import { Provider } from 'react-redux';
+import store from "./store/redux.jsx"
 
 i18next.init({
   interpolation:{escapeValue:false},
@@ -21,6 +23,7 @@ i18next.init({
   }
 })
 ReactDOM.createRoot(document.getElementById('root')).render(
+  <Provider store={store}>
   <BrowserRouter>
   <React.StrictMode>
     <I18nextProvider i18n={i18next}>
@@ -28,4 +31,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </I18nextProvider>
   </React.StrictMode>
   </BrowserRouter>
+  </Provider>
 )
