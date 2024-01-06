@@ -25,8 +25,8 @@ function index() {
 
 // SEND DATA
 const dispatch=useDispatch();
-const toggleDataAnnoun=(newData)=>{
-  dispatch({type:'AnnounDataChange',newData:newData})
+const toggleDataAnnoun=(data)=>{
+  dispatch({type:'AnnounDataChange',newData:data})
 }
 
   return (

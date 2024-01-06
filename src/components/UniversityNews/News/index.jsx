@@ -24,8 +24,8 @@ function index() {
 
   // SEND DATA
     const dispatch=useDispatch();
-  const toggleData=(newData)=>{
-    dispatch({type:'newDataChange',newData:newData})
+    const toggleData=(data)=>{
+    dispatch({type:'newDataChange',newData:data})
   }
 
   return (
@@ -54,10 +54,11 @@ function index() {
               return (
                 <>
                   <div className="col-3">
-                    <NavLink to="/News/Details" onClick={()=>toggleData(obj)}>
+                    <NavLink to="/News/Details" >
                       <div
                         className="card position-relative"
                         style={{ width: "310px" }}
+                        onClick={()=>toggleData({obj})}
                       >
                         <img
                           src={baseURL + obj.image[0].image}

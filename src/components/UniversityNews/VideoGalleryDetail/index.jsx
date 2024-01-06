@@ -1,7 +1,11 @@
+import { useSelector } from "react-redux";
 import img from "../../../assets/photoGallery.svg";
 import { NavLink } from "react-router-dom";
 
 function index() {
+  //GETDATA
+  const data=useSelector((state)=>state.videoData);
+  console.log(data);
   return (
     <>
       <section className="index-News">
@@ -15,7 +19,7 @@ function index() {
                 <NavLink to="/">Universitet yangiliklari</NavLink>
               </li>
               <li>
-                <NavLink to="/Gallery">Video galareya</NavLink>
+                <NavLink to="/VideoGallery">Video galareya</NavLink>
               </li>
               <li>
                 <NavLink to="/Gallery/Details" className="News-title-now">
@@ -24,13 +28,11 @@ function index() {
               </li>
             </ul>
             <h3 className="News-title-h mb-5 mt-3">
-              Universitetda O'zbekiston Respulikasi Konstitutsiyada
-              iste'molchilar huquqlarini himoya qilish bo'yicha davra suhbati
-              bo'lib o'tdi.
+              {data!=0?data.title:""}
             </h3>
           </div>
           <div>
-          <iframe width="1280" height="720" style={{borderRadius:"15px"}} src="https://www.youtube.com/embed/5ZS__KFmP3w" title="QABUL BOSHLANDI | 2023-2024 | NAVOIY INNOVATSIYALAR UNIVERSITETI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe width="1280" height="720" style={{borderRadius:"15px"}} src={`https://www.youtube.com/embed/${'jm-7mOwVOVM'}`} title="QABUL BOSHLANDI | 2023-2024 | NAVOIY INNOVATSIYALAR UNIVERSITETI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
           </div>
           </section>

@@ -34,9 +34,19 @@ const req = {
         }
     } ,
     getGrandDetails: () => axios(`${baseURL}/Grand/Details`),
-    getGallery: () => axios(`${baseURL}/Gallery`),
+    getGallery: async () => {
+        const response = await axios.get(`${baseURL}/news/?d=foto`);
+        if (response.status === 200) {
+            return response.data;
+        }
+    } ,
     getGalleryDetails: () => axios(`${baseURL}/Gallery/Details`),
-    getVideoGallery: () => axios(`${baseURL}/VideoGallery`),
+    getVideoGallery: async () => {
+        const response = await axios.get(`${baseURL}/news/?d=video`);
+        if (response.status === 200) {
+            return response.data;
+        }
+    } , 
     getVideoGalleryDetails: () => axios(`${baseURL}/VideoGallery/Details`),
     getDocuments: () => axios(`${baseURL}/UniversityAbout/University`),
     getUniverStory: () => axios(`${baseURL}/UniversityAbout/History`),

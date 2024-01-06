@@ -30,6 +30,15 @@ position: relative;
 	left: 0%!important;
 	bottom: 64px!important;
 }
+.carousel-item .active{
+	display: block;
+	height: 626px;
+	width: 1450px;
+	position: absolute;
+	left: -1350px;
+	z-index: 100;
+}
+
 .slider {
 	background: rgba(21, 123, 35, 0.57);
 	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);

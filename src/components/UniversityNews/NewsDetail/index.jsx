@@ -10,8 +10,8 @@ function index() {
   
 
   //GETDATA
-  const counter=useSelector((state)=>state.counter);
-console.log(counter);
+  const data=useSelector((state)=>state.newData);
+console.log(data.obj);
   return (
     <>
       <section className="index-News">
@@ -35,12 +35,12 @@ console.log(counter);
                 </NavLink>
               </li>
             </ul>
-            <h3 className="News-title-h mb-5 mt-3">{((counter!=0)?counter.title:'')}</h3>
+            <h3 className="News-title-h mb-5 mt-3">{((data.obj!=0)?data.obj.title:"")}</h3>
           </div>
           <div className="NewsDetail_Card d-flex">
-            <img src={((counter!=0)?baseURL+counter.image[0].image:img)} alt="" className="NewsDetail_Card_img"/>
+            <img src={((data.obj!=0)?baseURL+data.obj.image[0].image:img)} alt="" className="NewsDetail_Card_img"/>
             <div className="NewsDetail_Card_box">
-                <p>{((counter!=0)?counter.text:'')}</p>
+                <p>{((data.obj!=0)?data.obj.text:"")}</p>
             </div>
           </div>
         </div>

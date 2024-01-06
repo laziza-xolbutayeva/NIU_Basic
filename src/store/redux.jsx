@@ -1,18 +1,35 @@
 import { createStore } from "redux";
 
-const counterReducer=(state={counter:0}, action)=>{
+const initalState={newData:0,announData:0,grandData:0,galleryData:0,videoData:0}
+
+const Reducer=(state=initalState, action)=>{
     if(action.type==="newDataChange"){
         return {
-            counter:action.newData,
+            newData:action.newData,
         };
     }
     if(action.type==="AnnounDataChange"){
         return {
-            counter:action.DataAnnoun,
+            announData:action.newData,
+        };
+    }
+    if(action.type==="GrandDataChange"){
+        return {
+            grandData:action.newData,
+        };
+    }
+    if(action.type==="GalleryDataChange"){
+        return {
+            galleryData:action.newData,
+        };
+    }
+    if(action.type==="VideoDataChange"){
+        return {
+            videoData:action.newData,
         };
     }
     return state;
 }
 
-const store=createStore(counterReducer);
-export default store;
+const storeNew=createStore(Reducer);
+export default storeNew;

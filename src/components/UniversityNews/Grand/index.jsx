@@ -6,6 +6,7 @@ import { NavLink } from "react-router-dom";
 import { req } from "../../../API/API/index";
 import { baseURL } from "../../../API/API/index";
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 
 function index() {
   const [data, setData] = useState([]);
@@ -13,7 +14,6 @@ function index() {
     try {
       const result = await req.getGrand();
       setData(result.results);
-      console.log(result.results);
     } catch (err) {
       console.log(err);
     }
@@ -21,6 +21,11 @@ function index() {
   useEffect(() => {
     fetchData();
   }, []);
+  // SEND DATA
+const dispatch=useDispatch();
+const toggleDataGrand=(data)=>{
+  dispatch({type:'GrandDataChange',newData:data})
+}
   return (
     <>
       <section className="index-Grand">
@@ -46,7 +51,7 @@ function index() {
               return (
                 <>
                 <div className="col-4">
-              <NavLink to="/Grand/Details">
+              <NavLink to="/Grand/Details" onClick={()=>toggleDataGrand(obj)}>
                 <div
                   className="card position-relative"
                   style={{ width: "400px" }}
