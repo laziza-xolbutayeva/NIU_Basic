@@ -48,7 +48,7 @@ function index() {
                   <label htmlFor="regPrevEdu">
                     Attestat yoki diplomning elektron nusxasi
                   </label>
-                  <label for="custom-file-upload" class="filupp">
+                  <label for="custom-file-upload" className="filupp">
                       <span className="js-value"> </span>
                     <input
                     className="inputFile"
@@ -79,7 +79,7 @@ function index() {
                   <label htmlFor="regPrevEdu">
                   IELTS sertifikatining elektron nusxasi (agar mavjud bo’lsa)
                   </label>
-                  <label for="custom-file-upload" class="filupp">
+                  <label for="custom-file-upload" className="filupp">
                       <span className="js-value">Yuklang</span>
                     <input
                     className="inputFile"
