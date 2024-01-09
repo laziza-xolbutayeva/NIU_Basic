@@ -19,35 +19,30 @@ const req = {
             return response.data;
         }
     },
-    getNewsDetails: () => axios(`${baseURL}/News/Details`),
     getAnnouncements:async () => {
         const response = await axios.get(`${baseURL}/news/?d=announcement`);
         if (response.status === 200) {
             return response.data;
         }
     },
-    getAnnouncementsDetails: () => axios(`${baseURL}/Announsements/Details`),
     getGrand:async () => {
         const response = await axios.get(`${baseURL}/news/?d=scholarship`);
         if (response.status === 200) {
             return response.data;
         }
     } ,
-    getGrandDetails: () => axios(`${baseURL}/Grand/Details`),
     getGallery: async () => {
         const response = await axios.get(`${baseURL}/news/?d=foto`);
         if (response.status === 200) {
             return response.data;
         }
     } ,
-    getGalleryDetails: () => axios(`${baseURL}/Gallery/Details`),
     getVideoGallery: async () => {
         const response = await axios.get(`${baseURL}/news/?d=video`);
         if (response.status === 200) {
             return response.data;
         }
     } , 
-    getVideoGalleryDetails: () => axios(`${baseURL}/VideoGallery/Details`),
     getDocuments: () => axios(`${baseURL}/UniversityAbout/University`),
     getUniverStory: () => axios(`${baseURL}/UniversityAbout/History`),
     getUniverLaws: () => axios(`${baseURL}/UniversityAbout/Laws`),
@@ -64,8 +59,8 @@ const req = {
     getFirstViceRector: () => axios(`${baseURL}/Leaders/FirstViceRector`),
     getInnovationViceRector: () => axios(`${baseURL}/Leaders/InnovationViceRector`),
     getInternationalViceRector: () => axios(`${baseURL}/Leaders/InternationalViceRector`),
-    getRector:async () => {
-        const response = await axios.get(`${baseURL}/structure/leadership/u_rektor/`);
+    getRector:async (slug) => {
+        const response = await axios.get(`${baseURL}/structure/leadership/${slug}/`);
         if (response.status === 200) {
             return response.data;
         }

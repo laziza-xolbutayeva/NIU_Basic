@@ -18,9 +18,9 @@ color: #212529;
 .row a{
     text-decoration: none;
 }
-.card{
+.index-announsement .card{
     border: none!important;
-    border-radius: 15px;
+    border-radius: 15px!important;
     background: #F8F8F8!important;
     margin-bottom: 45px;
 }
@@ -49,4 +49,11 @@ height: 50px;;
 border-radius: 30px;
 border: none;
 color: #fff;
+font-family: Poppins;
+font-size: 16px;
+font-weight: 500;
+line-height: 50px;
+letter-spacing: 0em;
+text-align: center;
+
 }

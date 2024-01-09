@@ -50,8 +50,8 @@ text-align: left;
 .row a {
   text-decoration: none;
 }
-.col-3 .card {height: 520px;}
-.card {
+.index-News .col-3 .card {height: 520px;}
+.index-News .card {
   border: none !important;
   border-radius: 15px;
   background-color: #fff !important;
@@ -133,7 +133,7 @@ text-align: left;
 }
 
 
-.col-3 .card .card-img-top{
+.index-News .col-3 .card .card-img-top{
   height: 210px;
   width: 310px;
   border-top-left-radius: 15px;

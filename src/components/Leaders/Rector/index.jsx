@@ -4,14 +4,20 @@ import img from "../../../assets/leaders_img.svg";
 import "./style.css";
 import { req } from "../../../API/API/index";
 import { baseURL } from "../../../API/API/index";
+import { useSelector } from "react-redux";
 
 function index() {
   const [data, setData] = useState([]);
   const [bio, setBio] = useState([]);
   const [task, setTask] = useState([]);
+
+//GETDATA
+const getdata=useSelector((state)=>state.menuData);
+console.log(getdata);
+
   const fetchData = async () => {
     try {
-      const result = await req.getRector();
+      const result = await req.getRector(getdata.slug);
       setData(result);
       setBio(result.biography);
       setTask(result.task);
@@ -22,7 +28,9 @@ function index() {
   };
   useEffect(() => {
     fetchData();
-  }, [data]);
+  }, [getdata]);
+
+  
   return (
     <>
       <section className="index-News">
@@ -36,12 +44,12 @@ function index() {
                 <NavLink to="/">Tuzilma</NavLink>
               </li>
               <li>
-                <NavLink to="/">Rahbarlar</NavLink>
+                <NavLink to="/">Rahbariyat</NavLink>
               </li>
               <li>
-                <NavLink to="/Documents/Contracts" className="News-title-now">
-                  Universitet rektori
-                </NavLink>
+                <a to="#" className="News-title-now">
+                {data.name}
+                </a>
               </li>
             </ul>
             <h3 className="News-title-h">{data.name}</h3>

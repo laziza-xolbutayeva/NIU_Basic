@@ -3,12 +3,37 @@ import logo from "../../../assets/Link → niu_logotype_white_2.png.svg"
 import flag from "../../../assets/uzb-flag.svg";
 import russian from "../../../assets/russia-flag-circular-17765.svg";
 import english from "../../../assets/united_kingdom.svg";
-import {NavLink} from "react-router-dom";
+import { NavLink} from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import {menuReq, baseURL} from "../../../API/MenuAPI/index";
+import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 
 
 function index() {
   const [t, i18n]=useTranslation("global");
+  const [data, setData] = useState([0]);
+  
+  const fetchData = async () => {
+    try {
+      const result = await menuReq.getStructureLeadership();
+      setData(result.data);
+      console.log(result);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);
+  
+  // SEND DATA
+const dispatch=useDispatch();
+const menuDataSend=(data)=>{
+  dispatch({type:'menuDataSend',newData:data})
+}
+    
+  
   return (
     <>
       <div className="header-sticky">
@@ -173,163 +198,23 @@ function index() {
                   <a data-turbo="true">Tuzilma</a>
                   <ul>
                     <li className="nav-submenu menu-type-2">
-                      <a href="#" data-turbo="true">
+                      <a href="#" data-turbo="true" onClick={()=>{getStrucLeader()}}>
                         Rahbariyat
                       </a>
                       <ul>
-                        <li className="menu-type-2">
-                          <NavLink to="/Leaders/Rector" data-turbo="true">
-                            Universitet rektori
+                        {(data.length>=1)?data.map((obj)=>{
+                          console.log(obj);
+                          return (<>
+                          <li className="menu-type-2">
+                            <NavLink to={`/Leaders`} data-turbo="true" onClick={()=>menuDataSend(obj)}>
+                            {obj.name}
                           </NavLink>
-                        </li>
-                        <li className="menu-type-2">
-                          <NavLink
-                            to="/Leaders/FirstViceRector"
-                            data-turbo="true"
-                          >
-                            O'quv ishlari bo'yicha birinchi prorektor
-                          </NavLink>
-                        </li>
-                        <li className="menu-type-2">
-                          <NavLink to="/Leaders/ViceRector" data-turbo="true">
-                            
-                            O'quv ishlari bo'yicha prorektor
-                          </NavLink>
-                        </li>
-                        <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/Yoshlar_masalalari_prorektor"
-                            data-turbo="true"
-                          >
-                            
-                            Yoshlar masalalari va ma’naviy-ma’rifiy ishlar
-                            bo‘yicha birinchi prorektor
-                          </a>
-                        </li>
-                        <li className="menu-type-2">
-                          <NavLink
-                            to="/Leaders/InnovationViceRector"
-                            data-turbo="true"
-                          >
-                            Ilmiy ishlar va innovatsiyalar bo‘yicha prorektor
-                          </NavLink>
-                        </li>
-                        <li className="menu-type-2">
-                          <NavLink
-                            to="/Leaders/EconomicViceRector"
-                            data-turbo="true"
-                          >
-                            Moliya va iqtisod ishlari bo'yicha prorektor
-                          </NavLink>
-                        </li>
-                        <li className="menu-type-2">
-                          <NavLink
-                            to="/Leaders/InternationViceRector"
-                            data-turbo="true"
-                          >
-                            Xalqaro hamkorlik bo'yicha prorektor
-                          </NavLink>
-                        </li>
-                        <li className="menu-type-2">
-                          <NavLink
-                            to="/Leaders/ConstructionViceRector"
-                            data-turbo="true"
-                          >
-                            Qurulish-ta'mirlash ishlari bo'yicha prorektor
-                          </NavLink>
-                        </li>
-                        <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/Office_of_Transformation"
-                            data-turbo="true"
-                          >
-                            Transformatsiya ofisi
-                          </a>
-                        </li>
+                        </li></>);
+                        }):''}
                       </ul>
                     </li>
-                    <li className="nav-submenu menu-type-2">
-                      <a href="#" data-turbo="true">
-                        Institutlar va filiallar
-                      </a>
-                      <ul>
-                        <li className="menu-type-2">
-                          <a href="https://samdukf.uz/" data-turbo="true">
-                            NIU filiali
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li className="nav-submenu menu-type-2">
-                      <a href="#" data-turbo="true">
-                        Fakultetlar
-                      </a>
-                      <ul>
-                        <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/mathematics_faculty"
-                            data-turbo="true"
-                          >
-                            Matematika fakulteti
-                          </a>
-                        </li>
-                        <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/geography-ecology-faculty"
-                            data-turbo="true"
-                          >
-                            Geografiya va ekologiya fakulteti
-                          </a>
-                        </li>
-                        <li className="menu-type-2">
-                          <a href="/uz/pages/tarix_fakulteti" data-turbo="true">
-                            Tarix fakulteti
-                          </a>
-                        </li>
-                        <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/psixologiya_va_ijtimoiy_munosabatlar_fakulteti"
-                            data-turbo="true"
-                          >
-                            
-                            Psixologiya va ijtimoiy-siyosiy fanlar fakulteti
-                          </a>
-                        </li>
-                        <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/raqamli_texnologiyalar_fakulteti"
-                            data-turbo="true"
-                          >
-                            Intellektual tizimlar va kompyuter texnologiyalari
-                            fakulteti
-                          </a>
-                        </li>
-                        <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/yuridik_fakulteti"
-                            data-turbo="true"
-                          >
-                            Yuridik fakulteti
-                          </a>
-                        </li>
-                        <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/filologiya_fakulteti"
-                            data-turbo="true"
-                          >
-                            Filologiya fakulteti
-                          </a>
-                        </li>
-                        <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/Pedagogika_talimi_fakulteti"
-                            data-turbo="true"
-                          >
-                            Pedagogika ta’limi fakulteti
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
+                    
+                    
                     <li className="nav-submenu menu-type-2">
                       <a href="#" data-turbo="true">
                         Kafedralar
@@ -672,44 +557,15 @@ function index() {
                       <ul>
                         <li className="menu-type-2">
                           <a
-                            href="/uz/pages/research-centers"
-                            data-turbo="true"
-                          >
-                            Ilmiy markazlar
-                          </a>
-                        </li>
-                        <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/academic-council"
-                            data-turbo="true"
-                          >
-                            Kengash
-                          </a>
-                        </li>
-                        <li className="menu-type-2">
-                          <a
                             href="/uz/pages/ixtisoslashtirilgan-kengashlar"
                             data-turbo="true"
                           >
-                            Ilmiy kengashlar
+                            Uslubiy kengash
                           </a>
                         </li>
                         <li className="menu-type-2">
                           <a href="/uz/pages/ABSTRACTS" data-turbo="true">
                             Avtoreferatlar
-                          </a>
-                        </li>
-                        <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/scientific-journals"
-                            data-turbo="true"
-                          >
-                            Ilmiy jurnallar
-                          </a>
-                        </li>
-                        <li className="menu-type-2">
-                          <a href="https://axborotnoma.uz/" data-turbo="true">
-                            Ilmiy axborotnoma
                           </a>
                         </li>
                         <li className="menu-type-2">
@@ -792,14 +648,6 @@ function index() {
                         </li>
                         <li className="menu-type-2">
                           <a
-                            href="/uz/pages/harajatlarsmetasi"
-                            data-turbo="true"
-                          >
-                            Xarajatlar smetasi
-                          </a>
-                        </li>
-                        <li className="menu-type-2">
-                          <a
                             href="/uz/pages/tuzilganshartnomalar"
                             data-turbo="true"
                           >
@@ -838,14 +686,6 @@ function index() {
                           </a>
                         </li>
                         <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/jalbetilgansarmoya"
-                            data-turbo="true"
-                          >
-                            Jalb etilgan sarmoyalar va grantlar
-                          </a>
-                        </li>
-                        <li className="menu-type-2">
                           <a href="/uz/pages/IT_market" data-turbo="true">
                             Xalqaro IT mutaxassislarini jalb qilish
                           </a>
@@ -860,45 +700,7 @@ function index() {
                         </li>
                       </ul>
                     </li>
-                    <li className="nav-submenu menu-type-2">
-                      <a href="#" data-turbo="true">
-                        Ilmiy-innovatsion ishlanmalarni tijoratlashtirish
-                      </a>
-                      <ul>
-                        <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/tijoratlashtirishbulfaoliyati"
-                            data-turbo="true"
-                          >
-                            Tijoratlashtirish bo'limi faoliyati
-                          </a>
-                        </li>
-                        <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/tijilmiyloyihalar"
-                            data-turbo="true"
-                          >
-                            Ilmiy loyihalar
-                          </a>
-                        </li>
-                        <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/tijilmiyishlanmalar"
-                            data-turbo="true"
-                          >
-                            Ilmiy ishlanmalar
-                          </a>
-                        </li>
-                        <li className="menu-type-2">
-                          <a
-                            href="/uz/pages/tijtayyorishlanmalar"
-                            data-turbo="true"
-                          >
-                            Tijoratlashtirishga tayyor ishlanmalar
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
+                    
                   </ul>
                 </li>
                 <li className="list-inline-item nav-submenu menu-type-1">

@@ -1,24 +1,77 @@
 import "./style.css";
-import img from "../../../assets/carousel img.svg";
+import img from "../../../assets/carousel_img.svg";
+import {menuReq, baseURL} from "../../../API/MenuAPI/index";
+import { useEffect, useState } from "react";
+
 
 function index() {
+
+  const [banner, setBanner] = useState([0]);
+  const fetchData = async () => {
+    try {
+      const result = await menuReq.getBanner();
+      setBanner(result.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+
   return (
     <>
       <section className="index-swiper">
         <div className="swiper-container">
           <div id="myCarousel" className="carousel slide" data-ride="carousel">
             <ol className="carousel-indicators">
-              <li
+              {banner.length>=1?banner.map((img,i)=>{
+              console.log(img);
+              if(i==0){
+                return(<>
+                <li
                 data-target="#myCarousel"
-                data-slide-to="0"
+                data-slide-to={`${i}`}
                 className="active"
-              ></li>
-              <li data-target="#myCarousel" data-slide-to="1"></li>
-              <li data-target="#myCarousel" data-slide-to="2"></li>
+              ></li></>)}
+              else{
+              <li data-target="#myCarousel" data-slide-to={`${i}`}></li>
+              }}):''}
             </ol>
+            
 
             <div className="carousel-inner">
-              <div className="item active">
+            {banner.length>=1?banner.map((img,i)=>{
+              console.log(img);
+              if(i==0){
+                return(<>
+                <div className="item active">
+                  <img src={baseURL+img.image} alt="Los Angeles" style={{ width: "100%" }} />
+                  <div className="carousel-inner_text_wrapper">
+                    <div className="carousel-inner_text">
+                      <div className="carousel-inner_text_box">
+                        <p>{img.text}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </>)}
+                else{
+              return(<>
+              <div className="item">
+                <img src={`${baseURL}img`} alt="Los Angeles" style={{ width: "100%" }} />
+                <div className="carousel-inner_text_wrapper">
+                  <div className="carousel-inner_text">
+                    <div className="carousel-inner_text_box">
+                      <p>{img.text}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </>)}
+            }):''}
+              {/* <div className="item active">
                 <img src={img} alt="Los Angeles" style={{ width: "100%" }} />
                 <div className="carousel-inner_text_wrapper">
                   <div className="carousel-inner_text">
@@ -27,9 +80,9 @@ function index() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
-              <div className="item">
+              {/* <div className="item">
                 <img src={img} alt="Chicago" style={{ width: "100%" }} />
                 <div className="carousel-inner_text_wrapper">
                   <div className="carousel-inner_text">
@@ -49,7 +102,7 @@ function index() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             <a

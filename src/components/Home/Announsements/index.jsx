@@ -10,7 +10,7 @@ function index() {
         <div className="container">
           <div className="col-12">
             <div className="announsement-title d-flex justify-content-between">
-              <h3 data-aos="announsement-title-h">E'lonlar</h3>
+              <h3 className="announsement-title-h">E'lonlar</h3>
             </div>
           </div>
           <div className="row mt-5">

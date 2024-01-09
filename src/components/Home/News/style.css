@@ -19,9 +19,10 @@ color: #212529;
 .row a{
     text-decoration: none;
 }
-.card{
+.index-news .card{
     border: none!important;
     border-radius: 15px;
+    height: 372px;
 }
 .card-title{
     font-family: Poppins;
@@ -49,5 +50,12 @@ padding: 0px, 128px, 0px, 129px;
 border-radius: 30px;
 border: none;
 color: #fff;
+font-family: Poppins;
+font-size: 16px;
+font-weight: 500;
+line-height: 50px;
+letter-spacing: 0em;
+text-align: center;
+
 
 }

@@ -85,7 +85,7 @@ function App() {
             <Route path="/Leaders/EconomicViceRector" element={<EconomicViceRector />} />
             <Route path="/Leaders/InnovationViceRector" element={<InnovationViceRector />} />
             <Route path="/Leaders/InternationViceRector" element={<InternationViceRector />} />
-            <Route path="/Leaders/Rector" element={<Rector />} />
+            <Route path="/Leaders" element={<Rector />} />
             <Route path="/Leaders/ViceRector" element={<ViceRector />} />
           </Route>
           <Route path="/Registration" element={<AllReg />}>
